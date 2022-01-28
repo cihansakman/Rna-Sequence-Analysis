@@ -124,10 +124,10 @@ In this section, bioconducter package edgeR have been used for differential expr
 ![Ballgown-DE vs edgeR-DE](../main/images/venndiagram.png)
 
 ### Visualization of DE Genes with Ballgown
-In this section, the summary statistics for FPKM values of genes are plotted and analyzed with Ballgown package and R codes can be provided in [TutorialPart2-ballgown.R](R_Part2Ballgown.R). Also the plots can be provided by follwoing url:[](http://bioinfo05.mu.edu.tr/cihan/Tutorial_Part2_ballgown_output.pdf).
+In this section, the summary statistics for FPKM values of genes are plotted and analyzed with Ballgown package and R codes can be provided in [TutorialPart2-ballgown.R](R_Part2Ballgown.R). Also the plots can be provided by follwoing url:[outputs](http://bioinfo05.mu.edu.tr/cihan/Tutorial_Part2_ballgown_output.pdf).
 
 ### Analysis and Visualization of DE Genes without Ballgown
-In this section, the analysis and visualizations have been progressed without using Ballgown package. All the necessary R codes provided in section [Supplementary.R](Supplementary.R). In this section, 11 different plots are plotted to see discover differences between/among LUSC and Normal samples, examine the differential expression estimates, visualize the expression estimates and highlight those genes that appear to be differentially expressed. All 11 plots can be reached via [](http://bioinfo05.mu.edu.tr/cihan/enrichment_csv_files/Tutorial_Part3_Supplementary_R_output.pdf).
+In this section, the analysis and visualizations have been progressed without using Ballgown package. All the necessary R codes provided in section [Supplementary.R](Supplementary.R). In this section, 11 different plots are plotted to see discover differences between/among LUSC and Normal samples, examine the differential expression estimates, visualize the expression estimates and highlight those genes that appear to be differentially expressed. All 11 plots can be reached via [outputs](http://bioinfo05.mu.edu.tr/cihan/enrichment_csv_files/Tutorial_Part3_Supplementary_R_output.pdf).
 
 ## RNA Sequence Mutation(ANNOVAR)
 In this section, de-novo(new) mutation discovery from a given BAM file have been performed. During this section [variation pipeline](http://eng1.mu.edu.tr/~tugba/SeqAnalysis/variation.pipeline) will be followed. Gene-based annotation of genetic variants tries to identify on the human genome, hg38. Gene-based annotation will highlight the exact amino acid change if the mutation is in the exonic region and the predicted effect on the function of the known gene.
@@ -139,7 +139,7 @@ The Gene Set Enrichment Analysis(GSEA) method derives its power by focusing on g
 * KEGG Pathway
 * Immune Pathway
 
-R Codes for Enrichment Analysis provided in section [Gene_Set_Enrichment_Analysis_R](GeneSetEnrinchmentAnalysis.R) Code. Also, necessary output csv files and plot can be observed via [](http://bioinfo05.mu.edu.tr/cihan/GSEA/).
+R Codes for Enrichment Analysis provided in section [Gene_Set_Enrichment_Analysis_R](GeneSetEnrinchmentAnalysis.R) Code. Also, necessary output csv files and plot can be observed via [GSEA Outputs](http://bioinfo05.mu.edu.tr/cihan/GSEA/).
 
 
 
