@@ -118,3 +118,29 @@ head gene_read_counts_table_all_final.tsv
 ## Differential Expression
 Ballgown is going to use for comparison visualizations of the LUSC and normal conditions. First of all, in our R code which is provided in section [TutorialPart1ballgown.R](R_Part1Ballgown.R), we’ll eliminate the low differentially expressed genes with rowVars(bg) >1 function. We use statistical testing to decide whether, for a given gene, an observed difference in read counts is significant, that is, whether it is greater than what would be expected just due to natural random variation. Therefore, in the R codes in section [TutorialPart1ballgown.R](R_Part1Ballgown.R) we only take the genes which are significant(p-value <0.05). Also, we try to eliminate some of the genes by assigning a threshold to FoldChange(FC). FC describes the ratio of two values (ratio of expression in healthy/diseased cases). Due to FC commonly used with log2 if the log2(FC) is equal to 1 between A and B, then A is twice as big as B (or A is 200% of B). Then we’re going to eliminate the genes whether their log2(FC) is greater than 1 or not. If their log2(Foldchange) is less than 1 these genes will be eliminated. But in that case, there would be a biased problem to use FC. For example, if the difference between A and B is 10.000 but the ratio is less than 2 our filtering mechanism will eliminate that gene. On the other hand, if the difference between A and B is 10 but the ratio is 6 our filtering system will account for that gene. Therefore after eliminate the genes by their FC values we’ll sort the genes according to their p-values by increased order and the top 20 genes(lowest p-values) will be printed and the top gene is going to use for Ballgown visualization.
 
+### Differential Expression with HTSEQ-Count
+In this section, bioconducter package edgeR have been used for differential expression of count-based RNA-seq data which is generated in section HTSEQ-Count. After running the R codes in [edgeR.R](edgeR.R) section two different significant differentially expressed genes list generated. One of them is generated using Ballgown and the other is generated using edgeR. Below figure provide a nice visualization of overlaps with a venn diagram between Ballgown DE and edgeR DE.
+
+![Ballgown-DE vs edgeR-DE](../main/images/venndiagram.png)
+
+### Visualization of DE Genes with Ballgown
+In this section, the summary statistics for FPKM values of genes are plotted and analyzed with Ballgown package and R codes can be provided in [TutorialPart2-ballgown.R](R_Part2Ballgown.R). Also the plots can be provided by follwoing url:[](http://bioinfo05.mu.edu.tr/cihan/Tutorial_Part2_ballgown_output.pdf).
+
+### Analysis and Visualization of DE Genes without Ballgown
+In this section, the analysis and visualizations have been progressed without using Ballgown package. All the necessary R codes provided in section [Supplementary.R](Supplementary.R). In this section, 11 different plots are plotted to see discover differences between/among LUSC and Normal samples, examine the differential expression estimates, visualize the expression estimates and highlight those genes that appear to be differentially expressed. All 11 plots can be reached via [](http://bioinfo05.mu.edu.tr/cihan/enrichment_csv_files/Tutorial_Part3_Supplementary_R_output.pdf).
+
+## RNA Sequence Mutation(ANNOVAR)
+In this section, de-novo(new) mutation discovery from a given BAM file have been performed. During this section [variation pipeline](http://eng1.mu.edu.tr/~tugba/SeqAnalysis/variation.pipeline) will be followed. Gene-based annotation of genetic variants tries to identify on the human genome, hg38. Gene-based annotation will highlight the exact amino acid change if the mutation is in the exonic region and the predicted effect on the function of the known gene.
+
+## Gene Set Enrichment Analysis(GSEA)
+The Gene Set Enrichment Analysis(GSEA) method derives its power by focusing on gene sets, that is, groups of genes that share common biological functions, chromosomal locations, or regulations. In this section three different pathways is going to use for GSEA:
+  • Gene Ontology(GO) Pathway
+  • KEGG Pathway
+  • Immune Pathway
+R Codes for Enrichment Analysis provided in section [Gene_Set_Enrichment_Analysis_R](GeneSetEnrinchmentAnalysis.R) Code. Also, necessary output csv files and plot can be observed via [](http://bioinfo05.mu.edu.tr/cihan/GSEA/).
+
+
+
+
+
+
