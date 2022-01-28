@@ -134,9 +134,11 @@ In this section, de-novo(new) mutation discovery from a given BAM file have been
 
 ## Gene Set Enrichment Analysis(GSEA)
 The Gene Set Enrichment Analysis(GSEA) method derives its power by focusing on gene sets, that is, groups of genes that share common biological functions, chromosomal locations, or regulations. In this section three different pathways is going to use for GSEA:
+
 * Gene Ontology(GO) Pathway
 * KEGG Pathway
 * Immune Pathway
+
 R Codes for Enrichment Analysis provided in section [Gene_Set_Enrichment_Analysis_R](GeneSetEnrinchmentAnalysis.R) Code. Also, necessary output csv files and plot can be observed via [](http://bioinfo05.mu.edu.tr/cihan/GSEA/).
 
 
